@@ -1,0 +1,34 @@
+Program Parachute Drop
+
+You are part of a rescue team in charge of determining what size parachute is need to drop the food and medical cargo. You have to determine the size of the chute from the information supplied to you. You are given only the weight of the payload in lb.
+
+The payload, under its parachute, will speed up toward the ground until the drag force on the chute is equal to the weight of the payload. So to figure this problem out, we need to find equations for drag force and for the payload’s weight and set them to be equal.
+
+The Answer:
+D = sqrt( (8 m g) / (π ρ Cd v2) )
+
+Where
+D is the chute diameter in meters
+m is the payload mass in kilograms
+g is the acceleration of gravity = 9.8 m/s2
+π is 3.14159265359
+ρ is the density of air = 1.22 kg/m3
+Cd is the drag coefficient of the chute, or 1.5 for a parachute (true dome-shaped chute).
+v is the speed we want at impact with the ground (3 m/s or less)
+
+ Here is an example:
+If m = 62.3g
+D = sqrt( (8 m g) / (p r Cd v2) ) = sqrt( (8*0.0623*9.81) / (3.14*1.22*0.75*32) ) = 0.435 m
+...which is equal to 17 inches or 1ft 5in.
+
+Input:
+Your program should ask the user for the weight of the payload in lb.
+Ask the user if the impact of ft/sec (conversion of 3 m/s) is ok if not what speed would they like. (They might have a special cargo that the landing needs to be a little softer/harder). If OK use the default “3m/s”.
+
+Calculate and print out the size of the chute in inches and ft / inches.
+Remember your conversions. I expect to see separate methods for each needed conversions where when passed a value will return the correct converted value. to convert the size meters to inches!
+
+Output:
+For a payload of <lb>
+You will need a chute of at lease  <?> inches or  <ft/in> .
+The payload will hit the ground @ <  feet/sec  >
